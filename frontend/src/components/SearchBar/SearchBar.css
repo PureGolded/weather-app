@@ -1,12 +1,19 @@
 .search-bar {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-form {
+  width: 100%;
 }
 
 .search-container {
   display: flex;
   gap: 0.5rem;
-  max-width: 400px;
-  margin: 0 auto;
 }
 
 .search-input {
@@ -60,4 +67,49 @@
 .search-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.suggestions-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border-radius: 15px;
+  margin-top: 0.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.suggestion-name {
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.suggestion-country {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
 }

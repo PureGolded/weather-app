@@ -34,19 +34,22 @@ body {
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.5rem;
   position: relative;
   z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .app-header {
   text-align: center;
-  margin-bottom: 3rem;
-  padding: 2rem 0;
+  margin-bottom: 2rem;
+  padding: 1.5rem 0;
 }
 
 .app-header h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 300;
   color: white;
   margin-bottom: 0.5rem;
@@ -54,7 +57,7 @@ body {
 }
 
 .app-header p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.8);
   font-weight: 300;
 }
@@ -63,7 +66,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
+  flex-grow: 1;
+  width: 100%;
 }
 
 .error-message {
@@ -71,12 +76,14 @@ body {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 59, 48, 0.3);
   color: #ff6b6b;
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
+  padding: 1.2rem 1.8rem;
+  border-radius: 15px;
   text-align: center;
   font-weight: 500;
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
+  box-shadow: 0 8px 32px rgba(255, 59, 48, 0.1);
+  line-height: 1.5;
 }
 
 @media (max-width: 768px) {
@@ -84,11 +91,20 @@ body {
     padding: 1rem;
   }
   
+  .app-header {
+    margin-bottom: 1.5rem;
+    padding: 1rem 0;
+  }
+  
   .app-header h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   
   .app-header p {
     font-size: 1rem;
+  }
+  
+  .app-main {
+    gap: 1.2rem;
   }
 }

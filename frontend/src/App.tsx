@@ -51,6 +51,14 @@ function App() {
     setError(null);
     
     try {
+      const permissionState = await weatherService.checkLocationPermission();
+      
+      if (permissionState === 'denied') {
+        setError('Location access is denied. Please enable location permissions in your browser settings and try again.');
+        setLoading(false);
+        return;
+      }
+
       const position = await weatherService.getCurrentLocation();
       const weatherData = await weatherService.getWeatherByCoordinates(
         position.coords.latitude,

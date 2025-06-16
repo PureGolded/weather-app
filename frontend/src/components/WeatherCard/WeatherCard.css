@@ -2,11 +2,15 @@
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   border-radius: 20px;
-  padding: 2rem;
-  margin-bottom: 2rem;
+  padding: 2.5rem;
+  margin-bottom: 1.5rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .weather-card:hover {
@@ -88,4 +92,28 @@
   color: white;
   font-weight: 600;
   font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .weather-card {
+    padding: 1.8rem;
+    max-width: 100%;
+  }
+
+  .temperature {
+    font-size: 3rem;
+  }
+
+  .weather-icon {
+    font-size: 3.5rem;
+  }
+
+  .weather-details {
+    gap: 1rem;
+  }
+
+  .detail-item {
+    min-width: 100px;
+    padding: 0.8rem;
+  }
 }
